@@ -184,9 +184,7 @@ const u16 gConstSkillTable_Job[0x100][2] = {
 	},
 
 	[CLASS_FIGHTER] = {
-#if (defined(SID_Teleportation) && COMMON_SKILL_VALID(SID_Teleportation))
-		SID_Teleportation,
-#endif
+
 	},
 
 	[CLASS_BERSERKER] = {
@@ -222,8 +220,6 @@ const u16 gConstSkillTable_Job[0x100][2] = {
 	},
 
 	[CLASS_SOLDIER] = {
-#if (defined(SID_Obstruct) && COMMON_SKILL_VALID(SID_Obstruct))
-		SID_Obstruct,
-#endif
+
 	},
 };

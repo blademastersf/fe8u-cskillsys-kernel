@@ -46,7 +46,7 @@
  * 1: Only show kernel tutorial in tutorial mode
  * 2: show kernel tutorial at anytime
  */
-#define CONFIG_KTUT_LEVEL 2
+#define CONFIG_KTUT_LEVEL 0
 
 /**
  * If uncommented, enable patch
@@ -120,7 +120,7 @@
 /**
  * Enable leader-ship features
  */
-// #define CONFIG_LEADER_SHIP_EN
+ #define CONFIG_LEADER_SHIP_EN
 
 /**
  * If uncommented, this will disable move-path calculation and display.
@@ -159,9 +159,9 @@
  * 3: 100%
  * 4: 0%
  */
-#define CONFIG_LVUP_MODE_TUTORIAL 2
+#define CONFIG_LVUP_MODE_TUTORIAL 0
 #define CONFIG_LVUP_MODE_NORMAL 0
-#define CONFIG_LVUP_MODE_HARD 1
+#define CONFIG_LVUP_MODE_HARD 0
 
 /**
  * Page1 styles
@@ -225,7 +225,7 @@
 /**
  * If you press ↑↑↓↓←→←→BA at titlescreen, then...
  */
-#define CONFIG_USE_KONAMI_CODE_BONUS
+//#define CONFIG_USE_KONAMI_CODE_BONUS
 
 /**
  * IER
@@ -268,5 +268,11 @@
 #define CONFIG_UNIT_AMT_ALLY  51
 #define CONFIG_UNIT_AMT_ENEMY 50
 #define CONFIG_UNIT_AMT_NPC   8
+
+#define CONFIG_VESLY_DRAW_ANIMATIONS
+
+#define CONFIG_VESLY_AOE
+
+#define CONFIG_FREE_MOVEMENT
 
 #endif /* CONFIG_INSTALLED */

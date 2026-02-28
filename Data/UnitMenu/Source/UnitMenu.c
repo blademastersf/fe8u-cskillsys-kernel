@@ -6,6 +6,13 @@
 
 #define MenuItemsEnd {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 
+extern u8 AoE_SpecificUsability(const struct MenuItemDef *def, int number);
+extern u8 AoE_SpecificEffect(struct MenuProc * menu, struct MenuItemProc * menuItem);
+extern int AoE_SpecificHover(struct MenuProc * menu, struct MenuItemProc * menuItem);
+extern u8 AoE_AreAnyUsable(const struct MenuItemDef *def, int number);
+extern u8 AoE_Effect(struct MenuProc * menu, struct MenuItemProc * menuItem);
+extern int AoE_ClearGraphics(struct MenuProc * menu, struct MenuItemProc * menuItem);
+
 u8 pr_CombatArtActionCommandUsability(const struct MenuItemDef *def, int number);
 int pr_CombatArtActionCommandOnDarw(struct MenuProc *menu, struct MenuItemProc *item);
 u8 pr_CombatArtActionCommandEffect(struct MenuProc *menu, struct MenuItemProc *menuItem);
@@ -183,6 +190,24 @@ const struct MenuItemDef gUnitActionMenuItemsRework[] = {
 	{"　秘密店", 0x687, 0x6D1, 0, 0x61, SecretShopCommandUsability, 0, SecretShopCommandEffect, 0, 0, 0}, //SecretShop >
 	{"　闘技場", 0x688, 0x6D2, 0, 0x62, ArenaCommandUsability, 0, ArenaCommandEffect, 0, 0, 0}, // Arena
 	{"　救出", 0x689, 0x6C5, 0, 0x63, RescueUsability, 0, RescueEffect, 0, 0, 0}, // Rescue >
+#ifdef CONFIG_VESLY_AOE
+	/*{"", UM_AoESlash, UM_AoEDesc, TEXT_COLOR_SYSTEM_WHITE, 0, AoE_SpecificUsability, 0, AoE_SpecificEffect, 0, AoE_SpecificHover, 0},
+	MenuCommandID(UM_AoESlash, UM_AoEDesc, NormalText, 0, AoE_SpecificUsability|1, AoE_SpecificEffect|1, AoE_SpecificHover|1, HideMoveRangeGraphicsWrapper|1)
+	{"", UM_AoECleave, UM_AoEDesc, TEXT_COLOR_SYSTEM_WHITE, 1, AoE_SpecificUsability, 0, AoE_SpecificEffect, 0, AoE_SpecificHover, 0},
+	{"", UM_AoEImpale, UM_AoEDesc, TEXT_COLOR_SYSTEM_WHITE, 2, AoE_SpecificUsability, 0, AoE_SpecificEffect, 0, AoE_SpecificHover, 0},
+	{"", UM_AoEShoot, UM_AoEDesc, TEXT_COLOR_SYSTEM_WHITE, 3, AoE_SpecificUsability, 0, AoE_SpecificEffect, 0, AoE_SpecificHover, 0},
+	{"", UM_AoEBlast, UM_AoEDesc, TEXT_COLOR_SYSTEM_WHITE, 4, AoE_SpecificUsability, 0, AoE_SpecificEffect, 0, AoE_SpecificHover, 0},
+	{"", UM_AoEExpel, UM_AoEDesc, TEXT_COLOR_SYSTEM_WHITE, 5, AoE_SpecificUsability, 0, AoE_SpecificEffect, 0, AoE_SpecificHover, 0},
+	{"", UM_AoEHex, UM_AoEDesc, TEXT_COLOR_SYSTEM_WHITE, 6, AoE_SpecificUsability, 0, AoE_SpecificEffect, 0, AoE_SpecificHover, 0},
+	{"", UM_AoEHeal, UM_AoEHealHelp, TEXT_COLOR_SYSTEM_WHITE, 7, AoE_SpecificUsability, 0, AoE_SpecificEffect, 0, AoE_SpecificHover, 0},
+	{"", UM_AoERestore, UM_AoEHealHelp, TEXT_COLOR_SYSTEM_WHITE, 8, AoE_SpecificUsability, 0, AoE_SpecificEffect, 0, AoE_SpecificHover, 0},
+	{"", UM_AoEMend, UM_AoEHealHelp, TEXT_COLOR_SYSTEM_WHITE, 9, AoE_SpecificUsability, 0, AoE_SpecificEffect, 0, AoE_SpecificHover, 0},
+	{"", UM_AoEPhysic, UM_AoEHealHelp, TEXT_COLOR_SYSTEM_WHITE, 10, AoE_SpecificUsability, 0, AoE_SpecificEffect, 0, AoE_SpecificHover, 0},
+	{"", UM_AoERecover, UM_AoEHealHelp, TEXT_COLOR_SYSTEM_WHITE, 11, AoE_SpecificUsability, 0, AoE_SpecificEffect, 0, AoE_SpecificHover, 0},
+	{"", UM_AoEFortify, UM_AoEHealHelp, TEXT_COLOR_SYSTEM_WHITE, 12, AoE_SpecificUsability, 0, AoE_SpecificEffect, 0, AoE_SpecificHover, 0},*/
+	//MenuCommand_BPress(UM_AoEName, UM_AoEDesc, NormalText, AoE_AreAnyUsable, AoE_Effect, AoE_ClearGraphics)
+	{"",UM_AoEName,UM_AoEDesc,TEXT_COLOR_SYSTEM_WHITE,0,AoE_AreAnyUsable,0,AoE_Effect,0,AoE_ClearGraphics,0},
+#endif
 	{"　降ろす", 0x68A, 0x6C6, 0, 0x64, DropUsability, 0, DropEffect, 0, 0, 0}, // Drop >
 	{"　引受け", 0x68B, 0x6C8, 4, 0x65, TakeUsability, 0, TakeEffect, 0, 0, 0}, // Take >
 	{"　引渡し", 0x68C, 0x6C7, 4, 0x66, GiveUsability, 0, GiveEffect, 0, 0, 0}, // Give >
