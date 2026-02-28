@@ -8,7 +8,7 @@ u8 PickCommandUsability(const struct MenuItemDef *def, int number)
 		return MENU_NOTSHOWN;
 
 #if !CHAX
-	if (gActiveUnit->pClassData->number != CLASS_ROGUE)
+	if (gActiveUnit->pClassData->number != CLASS_ROGUE || gActiveUnit->pClassData->number != CLASS_TRICKSTER || gActiveUnit->pClassData->number != CLASS_SPY || gActiveUnit->pClassData->number != CLASS_NINJA || gActiveUnit->pClassData->number != CLASS_ASSASSIN || gActiveUnit->pClassData->number != CLASS_THIEF || gActiveUnit->pClassData->number != CLASS_HIGHWAYMEN)
 		return MENU_NOTSHOWN;
 #endif
 

@@ -17,7 +17,7 @@ const struct CombatArtRomTable gCombatArtRomPTable[0x100] = {
 };
 
 const struct CombatArtRomTable gCombatArtRomJTable[0x100] = {
-	[CLASS_EIRIKA_LORD] = {
+	/*[CLASS_EIRIKA_LORD] = {
 		.cid_sword = {
 			[WPN_LEVEL_E] = CID_Grounder,
 		},
@@ -40,7 +40,7 @@ const struct CombatArtRomTable gCombatArtRomJTable[0x100] = {
 			[WPN_LEVEL_A] = CID_HuntersVolley,
 			[WPN_LEVEL_S] = CID_BreakShotPlus,
 		},
-	},
+	},*/
 };
 
 const struct CombatArtRomTable gCombatArtDefaultTable = {

@@ -18,6 +18,9 @@ bool CheckSameClassType(u8 jid1, u8 jid2)
 		CheckClassArmor,
 		CheckClassDragon,
 		CheckClassBeast,
+		CheckClassNimble,
+		CheckClassMuscle,
+		CheckClassMage,
 		NULL
 	};
 
@@ -90,6 +93,39 @@ bool CheckClassBeast(u8 jid)
 	const u8 *it;
 
 	for (it = gpKernelClassList_Beast; *it != CLASS_NONE; it++)
+		if (*it == jid)
+			return true;
+
+	return false;
+}
+
+bool CheckClassNimble(u8 jid)
+{
+	const u8 *it;
+
+	for (it = gpKernelClassList_Nimble; *it != CLASS_NONE; it++)
+		if (*it == jid)
+			return true;
+
+	return false;
+}
+
+bool CheckClassMuscle(u8 jid)
+{
+	const u8 *it;
+
+	for (it = gpKernelClassList_Muscle; *it != CLASS_NONE; it++)
+		if (*it == jid)
+			return true;
+
+	return false;
+}
+
+bool CheckClassMage(u8 jid)
+{
+	const u8 *it;
+
+	for (it = gpKernelClassList_Mage; *it != CLASS_NONE; it++)
 		if (*it == jid)
 			return true;
 

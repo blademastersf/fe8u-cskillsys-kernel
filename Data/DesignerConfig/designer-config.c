@@ -28,7 +28,7 @@ const struct KernelDesigerConfig gKernelDesigerConfig = {
 #endif
 
 #ifdef CONFIG_USE_UTF8_GLYPH
-	.use_chinese_character = true,
+	.use_chinese_character = false,
 #endif
 
 	.kernel_tutorial_level = CONFIG_KTUT_LEVEL,
@@ -38,7 +38,7 @@ const struct KernelDesigerConfig gKernelDesigerConfig = {
 #endif
 
 #ifdef CONFIG_BATTLE_SURROUND
-	.battle_surrend_en = true,
+	.battle_surrend_en = false,
 #endif
 
 	.hit_decrease_on_range = true,
@@ -47,7 +47,7 @@ const struct KernelDesigerConfig gKernelDesigerConfig = {
 	.debug_autoload_skills = true,
 #endif
 
-	.guaranteed_lvup = false,
+	.guaranteed_lvup = true,
 	.lvup_mode_tutorial = CONFIG_LVUP_MODE_TUTORIAL,
 	.lvup_mode_normal   = CONFIG_LVUP_MODE_NORMAL,
 	.lvup_mode_hard	    = CONFIG_LVUP_MODE_HARD,

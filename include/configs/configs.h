@@ -1,7 +1,7 @@
 #ifndef CONFIG_INSTALLED
 #define CONFIG_INSTALLED
 
-#include "config-debug.h"
+//#include "config-debug.h"
 #include "config-memmap.h"
 
 /**

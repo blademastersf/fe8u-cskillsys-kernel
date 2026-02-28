@@ -6,15 +6,15 @@ const struct LeaderShipConf gLeaderShipConf = {
 	.en = true,
 #endif
 	.cancel_out_opposing = true,
-	.ally_bonus  = { 5, 3 },
-	.enemy_bonus = { 5, 3 },
-	.npc_bonus   = { 5, 3 },
+	.ally_bonus  = { 3, 3 },
+	.enemy_bonus = { 3, 3 },
+	.npc_bonus   = { 3, 3 },
 };
 
 const u8 gLeaderShipPConf[0x100] = {
-	[CHARACTER_EIRIKA] = 1,
+	//[CHARACTER_EIRIKA] = 1,
 };
 
 const u8 gLeaderShipJConf[0x100] = {
-	[CLASS_PALADIN] = 1,
+	//[CLASS_PALADIN] = 1,
 };

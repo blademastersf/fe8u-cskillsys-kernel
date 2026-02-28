@@ -7,10 +7,10 @@ STATIC_DECLAR int TrySwitchBanimInfo(int pos, u8 pid, u8 jid, const struct Battl
 
 struct BanimSyncHandler *FindBanimSyncHandler_test(struct Anim *anim)
 {
-	gBanimSyncHandler.pid = CHARACTER_EPHRAIM;
-	gBanimSyncHandler.jid = CLASS_EPHRAIM_LORD;
+	gBanimSyncHandler.pid = CHARACTER_HARVEY;
+	gBanimSyncHandler.jid = CLASS_HARVEY_LORD;
 	gBanimSyncHandler.weapon = ITEM_LANCE_BRAVE;
-	gBanimSyncHandler.animdef = GetClassData(CLASS_EPHRAIM_LORD)->pBattleAnimDef;
+	gBanimSyncHandler.animdef = GetClassData(CLASS_HARVEY_LORD)->pBattleAnimDef;
 	return &gBanimSyncHandler;
 }
 

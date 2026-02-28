@@ -31,7 +31,7 @@ struct FebListEnt const *const CharLevelUpSkillTable[0x100] = {
 };
 
 struct FebListEnt const *const ClassLevelUpSkillTable[0x100] = {
-	[CLASS_EIRIKA_LORD] = (const struct FebListEnt []) {
+	/*[CLASS_EIRIKA_LORD] = (const struct FebListEnt []) {
 #if (defined(SID_DoubleLion) && EQUIPE_SKILL_VALID(SID_DoubleLion))
 		{ JOB_SKILL_LEVEL_CONFIG(10, LOAD_JOB_SKILL_CONFIG_NONE), SID_DoubleLion },
 #endif
@@ -53,5 +53,5 @@ struct FebListEnt const *const ClassLevelUpSkillTable[0x100] = {
 #endif
 
 		{ 0 }
-	},
+	},*/
 };
